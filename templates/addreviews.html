@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Product Review App Demo</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <header>
+    <div class="Logo"><img src="{{ url_for('static', filename='Logo.png') }}" alt="Logo" class="Logo"></div>
+    <div class="Title"> Product Review App Demo </div>
+  </header>
+  <body>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#">Review App Demo</a>
+        </div>
+    </div>
+    <form data-bind="submit: addreview">
+    <div id="main" class="container">
+
+      <table class="table table-striped">
+      	Username: <input data-bind="value: username" placeholder="Username" type="username"></input>
+            </div>
+            <div>
+        body: <textarea data-bind="value: body" placeholder="Content of review" type="text"></textarea>
+            </div>
+            <div>
+            </div>
+            <button type="submit">Add Review</button>
+          </table>
+</form>
+    <ul data-bind="foreach: reviews_list, visible: reviews_list().length > 0">
+      <li>
+	       <p data-bind="text: username"></p>
+         <p data-bind="text: body"></p>
+         <p data-bind="text: timestamp"></p>
+      </li>
+    </ul>
+     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <!-- <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script> -->
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='review.js') }}"></script>
+  </body>
+</html>
