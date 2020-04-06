@@ -11,7 +11,7 @@ import sqlite3
 
 
 # connection to MongoDB Database
-connection = MongoClient("mongodb://localhost:27017/")
+connection = MongoClient("mongodb+srv://Admin:Admin123@cluster0-cj2z4.azure.mongodb.net/test?retryWrites=true&w=majority")
 
 # Object creation
 app = Flask(__name__)
