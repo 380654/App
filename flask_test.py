@@ -7,6 +7,7 @@ class FlaskappTests(unittest.TestCase):
         # creates a test client
         self.app = app.test_client()
         # propagate the exceptions to the test client
+        #test
         self.app.testing = True
     def test_users_status_code(self):
         # sends HTTP GET request to the application
