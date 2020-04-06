@@ -14,7 +14,7 @@
             </div>
             <div id="content">
             {% if session['name'] %}
-            Your name seems to be <strong>{{session['name']}}</strong>.<br/>
+            Your great name seems to be <strong>{{session['name']}}</strong>.<br/>
             {% else %}
             Please set username by clicking it <a href="{{ url_for('addname') }}">here</a>.<br/>
             {% endif %}
